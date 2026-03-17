@@ -1,0 +1,113 @@
+body {  
+    margin: 0;  
+    padding: 0; 
+    box-sizing: border-box;  /* Ensures padding and border are included in the element's total width/height calculation */
+    width: 100%;  
+    height: 100%; 
+    overflow: hidden;  /* Prevents scrolling on the body, keeping content fixed within the viewport */
+    background-image: url("../Images/mainPage.png");  /* Sets a background image for the body*/
+    background-size: cover;  
+    background-position: center;  
+    background-attachment: fixed;  /* Keeps the background image fixed in place during scrolling */
+}  
+
+.flex_container {  
+    display: flex;  /* Enables flexbox layout for child elements */
+    width: 100%; 
+}
+
+header {  
+    position: fixed;  /* Fixes the header in place at the top of the viewport */
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    display: flex;  
+    justify-content: space-between;  /* Spaces child elements evenly with space between them */
+    align-items: center;  
+    padding: 15px 80px; 
+    background: rgba(0,0,0,0.4);  
+    backdrop-filter: blur(6px);  /* Applies a blur effect to the background behind the header  */
+    border-bottom: 1px solid rgba(255,215,0,0.2); 
+}
+
+nav ul {  
+    list-style: none;  
+    display: flex;  
+    margin: 0;  
+    padding: 0; 
+}
+
+nav ul li {  
+    margin-left: 50px;  
+}
+
+nav ul li a {  
+    text-decoration: none;  
+    color: #d4af37;  
+    font-family: "Times New Roman", serif;  
+    font-size: 18px;  
+    letter-spacing: 2px;  
+    transition: 0.3s;  /* Adds a smooth transition effect for hover changes */
+}
+
+nav ul li a:hover {  
+    color: #fff4c2;  
+    text-shadow: 0 0 10px gold; 
+}
+
+nav ul li a.active { 
+    color: #fff;
+    font-weight: bold;  /* Makes the active link bold */
+    text-shadow: 0 0 5px gold;  
+}
+
+.about-btn {  
+    margin-right: 100px;  
+    padding: 10px 22px;  
+    background: transparent;  
+    border: 1px solid #d4af37; 
+    color: #d4af37; 
+    font-size: 16px;  
+    font-family: "Times New Roman", serif; 
+    letter-spacing: 1px;  
+    text-decoration: none;  
+    transition: 0.3s;  /* Adds smooth transition for hover effects */
+}
+
+.about-btn:hover {  
+    background: linear-gradient(to right, #f5d98b, #d4af37, #a67c00); 
+    color: black;  
+    box-shadow: 0 0 15px rgba(255,215,0,0.6); 
+}
+
+.main { 
+    display: flex; 
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center; 
+    min-height: 165vh;  /* Sets viewport height(165% of viewport height) */
+    padding: 0 5%;  
+    width: 100%;  
+    box-sizing: border-box; 
+}
+
+.main h1 {
+    text-align: center; 
+    margin: 0;  
+    font-size: clamp(2.5rem, 8vw, 5rem); 
+    font-weight: bold; 
+    font-family: "Times New Roman", serif;  
+    background: gold; 
+    -webkit-background-clip: text;  /* Clips background to text shape (WebKit browsers) */
+    -webkit-text-fill-color: transparent;  /* Makes text fill transparent to show background */
+    text-shadow: 
+        0px 0px 10px rgba(255,215,0,0.4),
+        0px 0px 20px rgba(255,215,0,0.3);
+}
+
+.main #introduction { 
+    text-align: center;  
+    font-family: "Times New Roman", serif;
+    font-size: 20px;  
+    color: #f9f9f9; 
+}
